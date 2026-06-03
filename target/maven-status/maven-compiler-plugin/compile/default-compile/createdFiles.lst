@@ -1,0 +1,9 @@
+base\base.class
+pages\Search.class
+pages\cart.class
+pages\Wishlist.class
+pages\Logout.class
+pages\Registration.class
+pages\Checkout.class
+utilities\utilities.class
+pages\Login.class

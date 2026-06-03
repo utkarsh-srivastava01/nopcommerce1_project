@@ -1,0 +1,314 @@
+<html>
+<head>
+<title>TestNG:  Cucumber Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Cucumber Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jun 03 18:37:14 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>804 seconds (804952 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add product to cart", "To test NopCommerce E-Commerce Application"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;cart-label&quot;&gt;...&lt;/span&gt; is not clickable at point (1092, 22). Other element would receive the click: &lt;p class=&quot;content&quot;&gt;...&lt;/p&gt;
+  (Session info: chrome=148.0.7778.217)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a71f7154fb1897ed8332709b9c1220fd, clickElement {id=f.D696159F2E3ABE3A5E8823D63F46B596.d.4D056FC59BC06CC329A48B777174BFD5.e.612}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\utkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58564}, goog:processID: 21868, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58564/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a71f7154fb1897ed8332709b9c1220fd)] -&gt; xpath: //span[text()=&apos;Shopping cart&apos;]]
+Session ID: a71f7154fb1897ed8332709b9c1220fd
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
+	at com.nopcommerce.utilities.utilities.clickElement(utilities.java:51)
+	at com.nopcommerce.pages.cart.openCart(cart.java:43)
+	at com.nopcommerce.stepdefinition.stepdefinition.product_should_be_added_to_cart(stepdefinition.java:564)
+	at ✽.Product should be added to cart(file:///C:/Users/utkar/Desktop/eclipse/nopcommerce/src/test/resources/Features/nopcommerce.feature:121)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace183354406", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace183354406'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;cart-label&quot;&gt;...&lt;/span&gt; is not clickable at point (1092, 22). Other element would receive the click: &lt;p class=&quot;content&quot;&gt;...&lt;/p&gt;
+  (Session info: chrome=148.0.7778.217)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a71f7154fb1897ed8332709b9c1220fd, clickElement {id=f.D696159F2E3ABE3A5E8823D63F46B596.d.4D056FC59BC06CC329A48B777174BFD5.e.612}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\utkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58564}, goog:processID: 21868, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58564/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a71f7154fb1897ed8332709b9c1220fd)] -&gt; xpath: //span[text()=&apos;Shopping cart&apos;]]
+Session ID: a71f7154fb1897ed8332709b9c1220fd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
+	at com.nopcommerce.utilities.utilities.clickElement(utilities.java:51)
+	at com.nopcommerce.pages.cart.openCart(cart.java:43)
+	at com.nopcommerce.stepdefinition.stepdefinition.product_should_be_added_to_cart(stepdefinition.java:564)
+	at ✽.Product should be added to cart(file:///C:/Users/utkar/Desktop/eclipse/nopcommerce/src/test/resources/Features/nopcommerce.feature:121)
+</pre></div></td>
+<td>40</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify product details page", "To test NopCommerce E-Commerce Application"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#small\-searchterms&quot;}
+  (Session info: chrome=148.0.7778.217)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e13756628491245d9d63b852c41dde97, findElement {value=small-searchterms, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\utkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60361}, goog:processID: 11424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60361/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e13756628491245d9d63b852c41dde97
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.clear(Unknown Source)
+	at com.nopcommerce.pages.Search.enterSearchKeyword(Search.java:26)
+	at com.nopcommerce.stepdefinition.stepdefinition.user_searches_product(stepdefinition.java:413)
+	at ✽.User searches product(file:///C:/Users/utkar/Desktop/eclipse/nopcommerce/src/test/resources/Features/nopcommerce.feature:85)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1118442276", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1118442276'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#small\-searchterms&quot;}
+  (Session info: chrome=148.0.7778.217)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e13756628491245d9d63b852c41dde97, findElement {value=small-searchterms, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\utkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60361}, goog:processID: 11424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60361/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e13756628491245d9d63b852c41dde97
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.clear(Unknown Source)
+	at com.nopcommerce.pages.Search.enterSearchKeyword(Search.java:26)
+	at com.nopcommerce.stepdefinition.stepdefinition.user_searches_product(stepdefinition.java:413)
+	at ✽.User searches product(file:///C:/Users/utkar/Desktop/eclipse/nopcommerce/src/test/resources/Features/nopcommerce.feature:85)
+</pre></div></td>
+<td>19</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify cart total", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>32</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select payment method", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>58</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify registration with existing email", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>40</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify forgot password functionality", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>29</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with invalid credentials", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>28</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user registration with valid details", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>40</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify successful registration message", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>39</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with valid credentials", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>29</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search product with invalid keyword", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>24</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search product with valid keyword", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>24</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify wishlist page", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>21</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter billing details", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>72</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify mandatory field validation", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>24</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify logout functionality", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>32</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add product to wishlist", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>39</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Remove item from cart", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>35</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Remove product from wishlist", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>34</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Proceed to checkout", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>37</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update quantity in cart", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>35</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+<tr>
+<td title='com.nopcommerce.runners.runner.runScenario()'><b>runScenario</b><br>Test class: com.nopcommerce.runners.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Confirm order successfully", "To test NopCommerce E-Commerce Application"</td>
+<td></td>
+<td>62</td>
+<td>com.nopcommerce.runners.runner@2de23121</td></tr>
+</table><p>
+</body>
+</html>

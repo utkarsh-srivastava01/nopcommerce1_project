@@ -18,7 +18,7 @@ import com.nopcommerce.utilities.utilities;
 	    PageFactory.initElements(driver, this);
 	    rm = new utilities(driver);
 	}
-
+   
 	// Select Product
 	@FindBy(xpath="//a[text()='Samsung Premium Ultrabook']")
 	WebElement product;
@@ -34,7 +34,14 @@ import com.nopcommerce.utilities.utilities;
 	public void addProductToCart() {
 	    rm.clickElement(addToCart);
 	}
+	///popupclose
+	@FindBy(css = "span.close")
+	WebElement closePopup;
 
+	public void closeNotificationPopup() {
+
+	    closePopup.click();
+	}
 	// Shopping Cart Link
 	@FindBy(xpath="//span[text()='Shopping cart']")
 	WebElement shoppingCart;

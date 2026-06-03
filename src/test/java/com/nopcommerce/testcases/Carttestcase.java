@@ -33,7 +33,8 @@ import com.nopcommerce.pages.cart;
 
 	    ct.addProductToCart();
 	    Thread.sleep(5000);
-
+	    ct.closeNotificationPopup();
+	    Thread.sleep(5000);
 	    ct.openCart();
 	    Thread.sleep(3000);
 
@@ -51,7 +52,7 @@ import com.nopcommerce.pages.cart;
 		lo.enterpassword("#uttu123");
 		Thread.sleep(3000);
 		lo.clickloginbutton();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	    cart ct = new cart(driver);
 
 	    ct.openCart();
@@ -96,7 +97,7 @@ import com.nopcommerce.pages.cart;
 		lo.enterpassword("#uttu123");
 		Thread.sleep(3000);
 		lo.clickloginbutton();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	    cart ct = new cart(driver);
 
 	    ct.openCart();

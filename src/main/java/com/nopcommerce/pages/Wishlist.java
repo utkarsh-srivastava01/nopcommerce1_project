@@ -42,7 +42,7 @@ import com.nopcommerce.utilities.utilities;
 	}
 
 	// Wishlist menu
-	@FindBy(xpath="//span[text()='Wishlist']")
+	@FindBy(css="a.ico-wishlist")
 	WebElement wishlistLink;
 
 	public void openWishlist() {

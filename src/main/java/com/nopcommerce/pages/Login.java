@@ -20,8 +20,9 @@ public Login(WebDriver driver) {
 }
 
 // Login Link
-@FindBy(xpath="//a[text()='Log in']")
+@FindBy(css="a.ico-login")
 WebElement login;
+
 
 public void clicklogin() {
     rm.clickElement(login);

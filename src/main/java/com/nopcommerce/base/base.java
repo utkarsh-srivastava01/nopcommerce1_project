@@ -11,14 +11,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class base {
 
-    public WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeMethod
     public void setup() throws InterruptedException {
         
       
             // Setup ChromeDriver
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().clearDriverCache().setup();
             
             // Create ChromeOptions
             ChromeOptions options = new ChromeOptions();

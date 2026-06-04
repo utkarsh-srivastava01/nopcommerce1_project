@@ -23,6 +23,9 @@ public Search(WebDriver driver) {
 WebElement searchBox;
 
 public void enterSearchKeyword(String value) {
+
+    rm.waitForElement(searchBox);
+
     searchBox.clear();
     searchBox.sendKeys(value);
 }
@@ -32,6 +35,7 @@ public void enterSearchKeyword(String value) {
 WebElement searchButton;
 
 public void clickSearchButton() {
+
     rm.clickElement(searchButton);
 }
 

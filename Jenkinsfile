@@ -12,7 +12,7 @@ stages {
     stage('Git Checkout') {
         steps {
             git branch: 'main',
-                url: ' https://github.com/utkarsh-srivastava01/nopcommerce_project.git'
+                url: 'https://github.com/utkarsh-srivastava01/nopcommerce1_project.git'
         }
     }
 
@@ -36,7 +36,7 @@ stages {
                 keepAll: true,
                 reportDir: 'src/test/resources/Reports',
                 reportFiles: 'cucumber-reports.html',
-                reportName: 'Flipkart Cucumber Report'
+                reportName: 'nopcommerce Cucumber Report'
             ])
         }
     }

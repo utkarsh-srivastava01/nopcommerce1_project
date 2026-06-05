@@ -21,7 +21,7 @@ public void user_clicks_register_link() {
         re = new Registration(driver);
 
         re.clickregistration();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -36,7 +36,7 @@ public void user_enters_first_name() {
     	  re.genderselection();
           Thread.sleep(3000);
         re.firstname("Utkarsh");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -50,7 +50,7 @@ public void user_enters_last_name() {
     try {
 
         re.lastname("Srivastava");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -67,7 +67,7 @@ public void user_enters_unique_email() {
                 "utkarsh" + System.currentTimeMillis() + "@gmail.com";
 
         re.enteremail(email);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -81,7 +81,7 @@ public void user_enters_company_name() {
     try {
 
         re.entercompanyname("Wipro");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -95,7 +95,7 @@ public void user_enters_password() {
     try {
 
         re.enterpassword("#uttu123");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -109,7 +109,7 @@ public void user_enters_confirm_password() {
     try {
 
         re.enterconfirmpassword("#uttu123");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -123,7 +123,7 @@ public void user_clicks_register_button() {
     try {
 
         re.registorbuttton();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -145,25 +145,25 @@ public void user_enters_existing_email_details() {
     try {
 
         re.genderselection();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.firstname("Utkarsh");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.lastname("Srivastava");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.enteremail("utkarshsri3690@gmail.com");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.entercompanyname("Wipro");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.enterpassword("#uttu123");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.enterconfirmpassword("#uttu123");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -183,7 +183,7 @@ public void user_clicks_register_button_without_entering_details() {
     try {
 
         re.registorbuttton();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 
@@ -207,34 +207,34 @@ public void user_completes_registration_successfully() {
         re = new Registration(driver);
 
         re.clickregistration();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.genderselection();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.firstname("Test");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.lastname("User");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         String email =
                 "test" + System.currentTimeMillis() + "@gmail.com";
 
         re.enteremail(email);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.entercompanyname("Wipro");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.enterpassword("#uttu123");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.enterconfirmpassword("#uttu123");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         re.registorbuttton();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     } catch (Exception e) {
 

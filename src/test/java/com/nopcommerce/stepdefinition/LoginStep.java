@@ -199,29 +199,31 @@ public class LoginStep extends base {
     @When("User clicks logout button")
     public void user_clicks_logout_button() {
 
-    try {
+        try {
 
-        lg.loginlogout();
-        Thread.sleep(2000);
+            lg = new Login(driver);
 
-    } catch (Exception e) {
+            lg.loginlogout();
+            Thread.sleep(4000);
 
-        e.printStackTrace();
-    }
+        } catch (Exception e) {
 
+            e.printStackTrace();
+        }
     }
 
     @Then("User should logout successfully")
     public void user_should_logout_successfully() {
 
-    try {
+        try {
 
-        Assert.assertTrue(
-                lg.isLoginDisplayed());
+            lg = new Login(driver);
 
-    } catch (Exception e) {
+            Assert.assertTrue(
+                    lg.isLoginDisplayed());
 
-        e.printStackTrace();
-    }
+        } catch (Exception e) {
 
+            e.printStackTrace();
+        }
     }}

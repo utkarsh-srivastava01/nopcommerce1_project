@@ -18,16 +18,16 @@ import com.nopcommerce.pages.Login;
 		    Login lg = new Login(driver);
 
 		    lg.clicklogin();
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    lg.enteremail("utkarshsri3690@gmail.com");
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    lg.enterpassword("#uttu123");
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    lg.clickloginbutton();
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    Assert.assertTrue(lg.isLogoutDisplayed());
 		}
@@ -39,16 +39,16 @@ import com.nopcommerce.pages.Login;
 		    Login lg = new Login(driver);
 
 		    lg.clicklogin();
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    lg.enteremail("invalid@gmail.com");
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    lg.enterpassword("wrong123");
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    lg.clickloginbutton();
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    Assert.assertTrue(
 		            lg.getLoginErrorMessage()
@@ -86,13 +86,13 @@ import com.nopcommerce.pages.Login;
 		    Login lg = new Login(driver);
 
 		    lg.clicklogin();
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    lg.enteremail("utkarshsri3690@gmail.com");
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    lg.enterpassword("#uttu123");
-		    Thread.sleep(3000);
+		    Thread.sleep(2000);
 
 		    lg.clickloginbutton();
 		    Thread.sleep(4000);
